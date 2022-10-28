@@ -406,16 +406,52 @@ Index | Se crea por columna, su función es hacer búsquedas con mayor rapidez. 
   <h5> Los constraints </h5>
 </div>
 
-### La Normalización
+### [La Normalización](https://programas.cuaed.unam.mx/repositorio/moodle/pluginfile.php/872/mod_resource/content/1/contenido/index.html)
 
-> El proceso de normalización es un estándar que consiste, básicamente, en un proceso de conversión de las relaciones entre las entidades. Es útil para separar la información, minimizar la redundancia de los datos, para que la actualización de los datos sea más sencilla y la integridad de los datos se conserve. Esto obedece a las 12 reglas de Codd y nos permiten separar componentes en la base de datos. Identificamos para ello 4 reglas denominadas **Formas normales**.
+La normalización es la transformación de las vistas de usuario complejas y del almacén de datos a un juego de estructuras de datos más pequeñas y estables. Además de ser más simples y estables, las estructuras de datos son más fáciles de mantener que otras estructuras de datos. Coronel, Morris y Rob (2011) refieren que la normalización es utilizada en diferentes momentos: 
 
-Formas normales | Descripción
-------------- | -------------
-Primera forma normal (1FN) | **Atributos atómicos (Sin campos repetidos)** <br> Para un atributo sólo debe existir una columna, si surge la necesidad, no se debe crear otra columna (Esto porque si crees que con n columnas es suficiente, tarde que temprano necesitarás n+1) Sencillamente se añade un identificador y posteriormente se divide por filas.
-Segunda forma normal (2FN) | **Cumple 1FN y cada campo de la tabla debe depender de una clave única.** <br> Esto nos ayuda a tener datos más organizados, y distinguir entre si un atributo hace parte de una entidad, o si son dos entidades separadas relacionadas estrechamente.
-Tercera forma normal (3FN) | **Cumple 1FN, 2FN y los campos que no son clave no deben tener dependencias.** <br> Sí un dato de un atributo esta directamente relacionado con otro, para que al editar un dato, no deba editar otro campo y haya espacio a errores (porque alguno “se me olvidó”), se separa en una tabla diferente de esta manera la actualización de los datos es más limpia.
-Cuarta forma normal (4FN) | **Cumple 1FN, 2FN, 3FN y los campos multivaluados se identifican por una clave única.** <br> Esta es usualmente útil cuándo se tiene una cardinalidad N:M, de muchos a muchos, y simplemente se crea una tabla especial para relacionar las claves únicas de las entidades.
+**Nueva estructura**
+
+1. Cuando diseñan una nueva estructura de bases de datos fundamentada en las necesidades de negocios de usuarios finales.
+
+**Análisis de relaciones entre atributos**
+
+2. Después de que el diseño inicial está completo, el diseñador puede usar normalización para analizar las relaciones que existen entre los atributos dentro de cada entidad, para determinar si la estructura se puede mejorar por medio de normalización.
+
+**Mejora en el diseño**
+
+3. Por medio de un análisis de relaciones entre los atributos o campos de la estructura de datos, el diseñador puede usar el proceso de normalización para mejorarla, a fin de crear un diseño apropiado de bases de datos.
+
+**Modificación de estructura**
+
+4. Para diseñar una nueva estructura de datos o modificar una ya existente, el proceso de normalización es el mismo.
+
+Esto obedece a las 12 reglas de Codd y nos permiten separar componentes en la base de datos:
+
+**Primera forma normal (1FN):** La primera regla de normalización se expresa generalmente en forma de dos indicaciones separadas:
+
+1. Todos los atributos, valores almacenados en las columnas, deben ser indivisibles.
+2. No deben existir grupos de valores repetidos.
+
+Una tabla está en 1FN cuando todos los atributos de clave están definidos y cuando todos los restantes dependen de la clave primaria. Sin embargo, una tabla en 1FN aún puede contener tanto dependencias parciales como transitivas (una dependencia parcial es aquella en la que un atributo es funcionalmente dependiente de una parte de una clave primaria de atributos múltiples. Una dependencia transitiva es aquella en la que un atributo es funcionalmente dependiente de otro atributo no de clave). Naturalmente una tabla con una clave primaria de un solo atributo no puede exhibir dependencias parciales.
+
+**El valor de una columna debe ser una entidad atómica, indivisible, excluyendo así las dificultades que podría conllevar el tratamiento de un dato formado de varias partes.**
+
+**Segunda forma normal (2FN):** Además de cumplir con las dos reglas del punto previo, la segunda forma normal añade la necesidad de que no existan dependencias funcionales parciales. Esto significa que todos los valores de las columnas de una fila deben depender de la clave primaria de dicha fila, entendiendo por clave primaria los valores de todas las columnas que la formen, en caso de ser más de una.
+
+Las tablas que están ajustadas a la primera forma normal, y además disponen de una clave primaria formada por una única columna con un valor indivisible, cumplen ya con la segunda forma normal. Ésta afecta exclusivamente a las tablas en las que la clave primaria está formada por los valores de dos o más columnas, debiendo asegurarse, en este caso, que todas las demás columnas son accesibles a través de la clave completa y nunca mediante una parte de esa clave.
+
+Una tabla se encuentra en 2FN cuando está en 1FN y no contiene dependencias parciales. Por consiguiente, una tabla 1FN automáticamente está en 2FN si su clave primaria está basada solamente en un atributo simple. Una tabla en 2FN aún puede contener dependencias transitivas.
+
+**Tercera forma normal (3FN):** En cuanto a la tercera forma normal, ésta indica que no deben existir dependencias transitivas entre las columnas de una tabla, lo cual significa que las columnas que no forman parte de la clave primaria deben depender sólo de la clave, nunca de otra columna no clave.
+
+Una tabla se encuentra en 3FN si está en 2FN y no contiene dependencias transitivas, lo cual significa que las columnas que no forman parte de la clave primaria deben depender sólo de la clave, nunca de otra columna no clave.
+
+**Cuarta forma normal (4FN):** Cumple 1FN, 2FN, 3FN y los campos multivaluados se identifican por una clave única. Has que todo sea único (Mirar las relaciones N:N)
+Esta es usualmente útil cuándo se tiene una cardinalidad N:M, de muchos a muchos, y simplemente se crea una tabla especial para relacionar las claves únicas de las entidades.
+
+**Nota: A términos prácticos la normalización consiste en ir descomponiendo tu tabla en pequeñas tablas que hacen referencia a ciertas entidades que se empiezan a relacionar con otras, y acabamos relacionándolas por medio de su id, así las referenciamos, y esto trae muchas ventajas, de entre ellas, podemos cambiar un dato en un solo lugar y esto se propagará a todos los lugares a donde este apunte.**
+
 
 <br>
 <div align="center"> 
