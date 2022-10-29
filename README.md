@@ -410,21 +410,13 @@ Index | Se crea por columna, su función es hacer búsquedas con mayor rapidez. 
 
 > La normalización es la transformación de las vistas de usuario complejas y del almacén de datos a un juego de estructuras de datos más pequeñas y estables. Además de ser más simples y estables, las estructuras de datos son más fáciles de mantener que otras estructuras de datos. Coronel, Morris y Rob (2011) refieren que la normalización es utilizada en diferentes momentos: 
 
-**Nueva estructura**
+1. Nueva estructura: Cuando diseñan una nueva estructura de bases de datos fundamentada en las necesidades de negocios de usuarios finales.
 
-1. Cuando diseñan una nueva estructura de bases de datos fundamentada en las necesidades de negocios de usuarios finales.
+2. Análisis de relaciones entre atributos: Después de que el diseño inicial está completo, el diseñador puede usar normalización para analizar las relaciones que existen entre los atributos dentro de cada entidad, para determinar si la estructura se puede mejorar por medio de normalización.
 
-**Análisis de relaciones entre atributos**
+3. Mejora en el diseño: Por medio de un análisis de relaciones entre los atributos o campos de la estructura de datos, el diseñador puede usar el proceso de normalización para mejorarla, a fin de crear un diseño apropiado de bases de datos.
 
-2. Después de que el diseño inicial está completo, el diseñador puede usar normalización para analizar las relaciones que existen entre los atributos dentro de cada entidad, para determinar si la estructura se puede mejorar por medio de normalización.
-
-**Mejora en el diseño**
-
-3. Por medio de un análisis de relaciones entre los atributos o campos de la estructura de datos, el diseñador puede usar el proceso de normalización para mejorarla, a fin de crear un diseño apropiado de bases de datos.
-
-**Modificación de estructura**
-
-4. Para diseñar una nueva estructura de datos o modificar una ya existente, el proceso de normalización es el mismo.
+4. Modificación de estructura: Para diseñar una nueva estructura de datos o modificar una ya existente, el proceso de normalización es el mismo.
 
 > Esto obedece a las 12 reglas de Codd y nos permiten separar componentes en la base de datos:
 
