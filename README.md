@@ -713,7 +713,7 @@ ROLLBACK | Utilizado para deshacer la modificación que hice desde el último CO
 
 #### Tablas independientes
 
-> Ahora empezaremos a plasmar la BD de Platziblog segun nuestro Diagrama Físico. Una buena práctica es comenzar creando las entidades que no tienen una llave foránea. A estas tablas se les denomina, tablas independientes. Generalmente en los nombres de bases de datos se evita usar eñes o acentos para evitar problemas en los manejadores de las bases de datos.
+> Ahora empezaremos a plasmar la BD de Platziblog segun nuestro Diagrama Físico. <u> Una buena práctica es comenzar creando las entidades que no tienen una llave foránea. A estas tablas se les denomina, tablas independientes. <u> Generalmente en los nombres de bases de datos se evita usar eñes o acentos para evitar problemas en los manejadores de las bases de datos.
 
     /*creacion de base de datos PlatziBlog*/
     create database PlatziBlog default character set utf8 ;
