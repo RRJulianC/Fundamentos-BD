@@ -1425,8 +1425,8 @@ Secuencias Auiliares | Descripción
 ------------- | -------------
 SELECT | Lo que quieres mostrar (Nickname, Titulo del post, etc).
 FROM | De dónde voy a tomar los datos (Tabla usuarios, Tabla  post, etc).
-WHERE | Los filtros de los datos que quieres mostrar (Deben de ser ..). **BETWEEN>** nos ayuda a filtrar registros que estén entre un rango. También debemos de tener en cuenta que si la condición es numérica se escribe sin comillas simples de lo contrario la condición se debe escribir dentro de comillas simples, Ej: ‘Texto’. **LIKE>** Nos ayuda a filtrar los registros cuando solo conocemos una parte de la información.
-GROUP BY | Los rubros por los que me interesa agrupar la información (Si/No deseo agrupar).El orden en que quiero presentar mi información. utiliza los siguientes criterios: **ASC.** Ordena de forma ascendente. **DESC.** Ordena de forma descendente **LIMIT.** Limita la cantidad de resultados para mostrar en el query, Ej: Mostrar los 5 primeros registros.
+WHERE | Los filtros de los datos que quieres mostrar (Deben de ser ..). **BETWEEN:** nos ayuda a filtrar registros que estén entre un rango. También debemos de tener en cuenta que si la condición es numérica se escribe sin comillas simples de lo contrario la condición se debe escribir dentro de comillas simples, Ej: ‘Texto’. **LIKE:** Nos ayuda a filtrar los registros cuando solo conocemos una parte de la información.
+GROUP BY | Los rubros por los que me interesa agrupar la información (Si/No deseo agrupar).El orden en que quiero presentar mi información. utiliza los siguientes criterios: **ASC:** Ordena de forma ascendente. **DESC:** Ordena de forma descendente **LIMIT:** Limita la cantidad de resultados para mostrar en el query, Ej: Mostrar los 5 primeros registros.
 HAVING | Los filtros que quiero que mis datos agrupados tengan.
 
 ### Preguntándole a la base de datos
