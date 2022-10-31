@@ -1707,4 +1707,11 @@ Recuerda practicar mucho con el proyecto. Te invito a que tomes el examen y veri
 
 ### Eligir una base de datos
 
-(PROXIMAMENTE...)
+> Has aprendido todo lo necesario para comenzar a trabajar con bases de datos relacionales y no-relacionales. Ahora es probable que al momento de iniciar con un proyecto te enfrentes a la pregunta ¿qué tipo de base de datos debo elegir?.
+
+> El teorema CAP te ayuda a tomar en cuenta 3 factores clave:
+
+> Consistencia.
+Disponibilidad.
+Tolerancia a la partición.
+En este [blogpost](https://platzi.com/blog/que-es-el-teorema-cap-y-como-elegir-la-base-de-datos-para-tu-proyecto/) podrás conocer más detalles para tomar la mejor decisión.
